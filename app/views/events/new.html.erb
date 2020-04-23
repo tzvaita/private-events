@@ -1,2 +1,8 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h1>Create your event</h1>
+
+<%= form_with(model: @event, local: true) do |f| %>
+  <%= f.label :desc %>
+  <%= f.text_field :desc %>
+
+  <%= f.submit 'Create event' %>
+<% end %>
