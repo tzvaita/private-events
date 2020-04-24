@@ -1,14 +1,35 @@
-<table>
-  <thead>
-    <tr>
-      <th>Event Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <% @events.each do |event| %>
-  <tr>
-    <td><%= event.title %></td>
-    <td><%= event.desc %></td>
-  </tr>
-  <% end %>
-</table>
+<div>
+  <h1>List of all Events: </h1>
+
+  <ol>
+    <% @events.each do |item| %>
+      <li>
+        <span>Name: <%= item.desc %></span><br>
+        <span>Date: <%= item.date%></span><br>
+      </li>
+    <%end%>
+  </ol>
+
+
+  <h1>Past Events </h1>
+
+  <ol>
+    <% @events.past.each do |item| %>
+      <li>
+        <span>Name: <%= item.desc %></span><br>
+        <span>Date: <%= item.date%></span><br>
+      </li>
+    <%end%>
+  </ol>
+
+  <h1>Upcoming Events </h1>
+
+  <ol>
+    <% @events.upcoming.each do |item| %>
+      <li>
+        <span>Name: <%= item.desc %></span><br>
+        <span>Date: <%= item.date%></span><br>
+      </li>
+    <%end%>
+  </ol>
+</div>

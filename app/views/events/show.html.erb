@@ -1,1 +1,7 @@
-<%= @event.user_id %>
+<% if @event.attendees.any? %>
+  <% @event.attendees.each do |attendee|  %>
+    <li><%= attendee.name %></li>
+  <% end %>
+<% else %>
+  <h3>No attendees yet!</h3>
+<% end %>

@@ -10,10 +10,23 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <p>Logged in as: <%= @current_user.name %></p>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <nav >
+      <h2>EVENTS APP</h2>
+        <% if logged_in?%>
+      <div class="logout-button">
+        <%=  link_to 'ALL EVENTS', events_path%>
+        <%=  link_to 'NEW EVENT', new_event_path%>
+        <%= link_to 'My Events', @current_user %>
+        <%= link_to 'Log out', logout_path, method: :delete %>
+      </div>
+      <% else %>
+        <%=  link_to 'LOGIN ', login_path%>
       <% end %>
+    </nav>
+
     <%= yield %>
-    <p><%= link_to 'Log out', logout_path, method: :delete %></p>
   </body>
 </html>
