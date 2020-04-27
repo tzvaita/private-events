@@ -1,28 +1,33 @@
 class EventsController < ApplicationController
+  # Directs to all events
   def index
     @events = Event.all
   end
 
+  # Directs new to event creation
   def new
     @event = current_user.events.build
   end
 
+  # creates and saves a new valid event
   def create
     @event = current_user.events.build(event_params)
     if @event.save
-      redirect_to @event
+      redirect_to(@event)
     else
-      render 'new'
+      render('new')
     end
   end
 
+  # shows one event
   def show
     @event = Event.find(params[:id])
   end
 
   private
 
-      def event_params
-        params.require(:event).permit(:desc, :user_id)
-      end
+  # event accepted parameters
+  def event_params
+    params.require(:event).permit(:desc, :user_id)
+  end
 end
