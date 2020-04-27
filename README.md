@@ -1,24 +1,29 @@
-# README
+# Rails Associations
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction
 
-Things you may want to cover:
+This project is part of microverse technical curriculum ruby on rails projects. In this project I created an events scheduler. User creation was done using Rails ActiveRecord only(no devise gem). The main feature of this project is creating associations between the tables including a has_many_through table.
 
-* Ruby version
+## Instructions
 
-* System dependencies
+1. Copy either one of the two cloning options in the repo
 
-* Configuration
+2. Open a terminal in the directory you want to house this project.
 
-* Database creation
+3. run git clone (paste the copied text)
 
-* Database initialization
+4. run bundle install to set up the projects environment on your local machine.
 
-* How to run the test suite
+5. To view the project in a browser run rails server in the terminal and visit http:localhost:3000 in your browser.
 
-* Services (job queues, cache servers, search engines, etc.)
+## About the project
 
-* Deployment instructions
++ Built using [Ruby v 2.7.1][rbl]
++ Used [Atom][vsc] as IDE
++ Git and Github were used for version control
 
-* ...
++ This was build as part of [microverse][mvs]'s technical curriculum.
++ Based on The Odin Project
+
+## The authors
++ Tennyson Zvaita - [@tennyzvaita](https://twitter.com/tennyzvaita) - tzvaita@gmail.com
