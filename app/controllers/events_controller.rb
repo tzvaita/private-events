@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   # Directs to all events
   def index
     @events = Event.all
+    @event = Event.find_by(id: params[:id])
   end
 
   # Directs new to event creation

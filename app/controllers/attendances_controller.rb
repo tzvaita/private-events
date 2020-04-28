@@ -8,4 +8,6 @@ class AttendancesController < ApplicationController
     current_user.attend(@event)
     redirect_to(@event)
   end
+
+  
 end
