@@ -6,7 +6,7 @@
     <% if @user.events.any? %>
       <h2>Events</h2>
       <ol>
-        <% @user.events.each do |event| %>
+        <% @events.each do |event| %>
           <li>
             <span>Event: <%= event.desc %></span><br>
             <span>Date: <%= event.date %></span><br>
