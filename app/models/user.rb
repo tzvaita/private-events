@@ -4,4 +4,8 @@ class User < ApplicationRecord
   has_many :attended_events, through: :attendances
 
   validates :name, presence: true, uniqueness: true
+
+  def attend(event)
+    attended_events << event
+  end
 end

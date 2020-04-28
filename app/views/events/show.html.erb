@@ -5,3 +5,8 @@
 <% else %>
   <h3>No attendees yet!</h3>
 <% end %>
+
+<%= form_for(current_user.attendances.build) do |f| %>
+  <%= hidden_field_tag :event_id, @event.id %>
+  <%= f.submit 'Attend' %>
+<% end %>
