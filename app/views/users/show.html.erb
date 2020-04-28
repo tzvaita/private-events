@@ -9,7 +9,8 @@
         <% @events.each do |event| %>
           <li>
             <span>Event: <%= event.desc %></span><br>
-            <span>Date: <%= event.date %></span><br>
+            <span>Date: <%= event.date %></span>
+            <%= link_to 'Event details', event_path(event) %>
           </li>
         <% end %>
       </ol>
@@ -20,7 +21,8 @@
         <% @previous_events.each do |prev| %>
           <li>
             <span>Event: <%= prev.desc %></span><br>
-            <span>Date: <%= prev.date %></span><br>
+            <span>Date: <%= prev.date %></span>
+            <%= link_to 'Event details', event_path(prev) %>
           </li>
         <% end %>
       </ol>
@@ -29,7 +31,8 @@
         <% @upcoming_events.each do |coming| %>
           <li>
             <span>Event: <%= coming.desc %></span><br>
-            <span>Date: <%= coming.date %></span><br>
+            <span>Date: <%= coming.date %></span>
+            <%= link_to 'Event details', event_path(coming) %>
           </li>
         <% end %>
       </ol>

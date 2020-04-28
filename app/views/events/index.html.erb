@@ -18,7 +18,8 @@
     <% @events.past.each do |item| %>
       <li>
         <span>Name: <%= item.desc %></span><br>
-        <span>Date: <%= item.date%></span><br>
+        <span>Date: <%= item.date%></span>
+        <%= link_to 'Event details', event_path(item) %></p>
       </li>
     <%end%>
   </ol>
@@ -29,7 +30,8 @@
     <% @events.upcoming.each do |item| %>
       <li>
         <span>Name: <%= item.desc %></span><br>
-        <span>Date: <%= item.date%></span><br>
+        <span>Date: <%= item.date%></span>
+        <%= link_to 'Event details', event_path(item) %></p>
       </li>
     <%end%>
   </ol>
