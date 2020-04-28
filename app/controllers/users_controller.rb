@@ -21,7 +21,6 @@ class UsersController < ApplicationController
     @attendances = @user.attendances
     @upcoming_events = @events.upcoming
     @previous_events = @events.past
-
   end
 
   private
