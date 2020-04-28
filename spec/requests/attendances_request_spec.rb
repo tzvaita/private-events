@@ -1,5 +1,4 @@
-require 'rails_helper'
+require('rails_helper')
 
-RSpec.describe "Attendances", type: :request do
-
+RSpec.describe('Attendances', type: :request) do
 end

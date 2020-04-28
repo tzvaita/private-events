@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
+  # Add an event to attendances
   def attend(event)
     attended_events << event
   end
