@@ -1,0 +1,38 @@
+<div>
+  <h1>List of all Events: </h1>
+
+  <ol>
+    <% @events.each do |item| %>
+      <li>
+        <span>Name: <%= item.desc %></span><br>
+        <span>Date: <%= item.date%></span>
+        <%= link_to 'Event details', event_path(item) %></p>
+      </li>
+    <%end%>
+  </ol>
+
+
+  <h1>Past Events </h1>
+
+  <ol>
+    <% @events.past.each do |item| %>
+      <li>
+        <span>Name: <%= item.desc %></span><br>
+        <span>Date: <%= item.date%></span>
+        <%= link_to 'Event details', event_path(item) %></p>
+      </li>
+    <%end%>
+  </ol>
+
+  <h1>Upcoming Events </h1>
+
+  <ol>
+    <% @events.upcoming.each do |item| %>
+      <li>
+        <span>Name: <%= item.desc %></span><br>
+        <span>Date: <%= item.date%></span>
+        <%= link_to 'Event details', event_path(item) %></p>
+      </li>
+    <%end%>
+  </ol>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  desc: MyString
+  date: 2020-04-23 02:06:47
+
+two:
+  title: MyString
+  desc: MyString
+  date: 2020-04-23 02:06:47

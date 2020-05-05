@@ -1,0 +1,25 @@
+<h2>Event info: </h2>
+<h5><%= @event.desc %></h5>
+
+<%= form_for(current_user.attendances.build) do |f| %>
+  <%= hidden_field_tag :event_id, @event.id %>
+  <%= f.submit 'Attend' %>
+<% end %>
+
+<h2>List of attendes</h2>
+<% if @event.attendees.any? %>
+  <% @event.attendees.each do |attendee|  %>
+    <li><%= attendee.name %></li>
+  <% end %>
+<% else %>
+  <h3>No attendees yet!</h3>
+<% end %>
+
+<h2>All users</h2>
+<ol>
+<% @users.each do |u| %>
+<li>
+  <%= u.name%>
+  </li>
+<% end %>
+</ol>
